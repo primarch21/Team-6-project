@@ -7,7 +7,7 @@ add_library(matrix_lib src/matrix.cpp)
 target_include_directories(matrix_lib PUBLIC include)
 # Исполняемый файл
 add_executable(matrix_filter src/main.cpp)
-target_link_libraries(matrix_fliter PRIVATE matrix_lib)
+target_link_libraries(matrix_filter PRIVATE matrix_lib)
 # Тесты
 enable_testing()
 add_subdirectory(tests)
