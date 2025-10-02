@@ -37,3 +37,11 @@ void print_matrix(Matrix m) {
         std::cout << "]" << std::endl;
     }
 }
+//Инверсия изображения
+void invert_image(Matrix* img){
+    for (int i=0; i < img->rows; i++){
+        for (int j = 0; i < img->cols; j++){
+            img->data[i][j] -= 255;
+        }
+    }
+}
