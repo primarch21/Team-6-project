@@ -37,3 +37,18 @@ void print_matrix(Matrix m) {
         std::cout << "]" << std::endl;
     }
 }
+
+
+// Собственные фукнции
+void apply_contrast(Matrix* img, float factor){
+    for (int i = 0; i < img->rows; i++) {
+        for (int j = 0; j < img->cols; j++) {
+
+            if (img->data[i][j] * factor > 255){
+                img->data[i][j] = 255;
+            }else{
+                img->data[i][j] *= factor;
+            }
+        }
+    }
+}
