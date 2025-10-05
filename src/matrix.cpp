@@ -37,3 +37,17 @@ void print_matrix(Matrix m) {
         std::cout << "]" << std::endl;
     }
 }
+//увеличение яркости
+void brighten_image(Matrix* img, int value){
+    for (int i = 0; i < img->rows; i++) {
+        for (int j = 0; j < img->cols; j++) {
+            if (img->data[i][j] + value > 255){
+                img->data[i][j] = 255;
+            }
+            else
+            {
+                img->data[i][j] += value;
+            }
+        }
+    }
+}
