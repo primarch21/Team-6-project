@@ -39,10 +39,10 @@ int main() {
         // Освобождаем память (каждую матрицу только один раз)
         free_matrix(A);
 
-        std::cout << "\nAll tasks completed successfully!" << std::endl;
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return 1;
-    }
-    return 0;
-}
+         std::cout << "\nAll tasks completed successfully!" << std::endl;
+     } catch (const std::exception& e) {
+         std::cerr << "Error: " << e.what() << std::endl;
+         return 1;
+     }
+     return 0;
+ }
